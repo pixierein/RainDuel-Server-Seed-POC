@@ -98,10 +98,7 @@ int NextByte(HashStream& Stream) {
 // generates a random number between 0 and infinity
 // uses rejection sampling to avoid uneven random results
 int GetRandom(HashStream& Stream, int Max) {
-
-
     int Count = Max + 1;
-
 
     // Prevents modulo bias
     int Limit = (256 / Count) * Count;
@@ -116,8 +113,7 @@ int GetRandom(HashStream& Stream, int Max) {
 
     }
 
-
-    return Value % Count;
+    return Value % Count
 }
 
 
